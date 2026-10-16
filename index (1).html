@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mercin Jenila · Issue #01</title>
+<meta name="description" content="Portfolio of Mercin Jenila, first-year B.Tech IT student.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Patrick+Hand&display=swap" rel="stylesheet">
+<script>
+(function(){var d=document.documentElement,t;d.className='js';try{t=localStorage.getItem('mj-theme')}catch(e){}
+if(!t)t=matchMedia('(prefers-color-scheme: dark)').matches?'night':'day';d.dataset.theme=t})();
+</script>
+<style>
+*{box-sizing:border-box;margin:0}
+:root{--red:#e8402a;--yellow:#ffc933;--on:#16120e;--bg:#f4ecd6;--panel:#fffaf0;--line:#16120e;--text:#16120e;--shadow:#16120e;--dot:rgba(232,64,42,.22)}
+[data-theme=night]{--bg:#15120f;--panel:#221d18;--line:#f4ecd6;--text:#f4ecd6;--shadow:#e8402a;--dot:rgba(255,201,51,.14)}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font:1.2rem/1.5 'Patrick Hand',cursive,sans-serif;color:var(--text);background:radial-gradient(circle,var(--dot) 1.4px,transparent 1.9px) 0 0/10px 10px,var(--bg);padding-top:15px;overflow-x:hidden}
+h1,h2,h3,.bang{font-family:Bangers,Impact,sans-serif;font-weight:400;letter-spacing:.03em;line-height:.95}
+a{color:inherit}
+:focus-visible{outline:3px dashed var(--text);outline-offset:4px}
+button{font:inherit;color:inherit;cursor:pointer}
+
+#bar{position:fixed;top:0;left:0;right:0;height:15px;z-index:60;background:var(--bg);border-bottom:3px solid var(--line)}
+#bar i{display:block;height:100%;transform-origin:0 50%;transform:scaleX(0);background:radial-gradient(circle,var(--on) 1.3px,transparent 1.8px) 0 0/6px 6px,var(--red);border-right:3px solid var(--line)}
+
+nav{position:sticky;top:15px;z-index:50;display:flex;gap:10px 14px;padding:8px 14px;background:var(--bg);border-bottom:3px solid var(--line);overflow-x:auto;white-space:nowrap}
+nav a{font:1rem Bangers;letter-spacing:.05em;text-decoration:none;padding:2px 6px;border:2px solid transparent;transition:transform .15s}
+nav a:hover{background:var(--yellow);color:var(--on);border-color:var(--line);transform:rotate(-3deg)}
+
+.mode{position:fixed;right:12px;bottom:12px;z-index:55;display:flex;padding:0;background:var(--panel);border:4px solid var(--line);box-shadow:4px 4px 0 var(--shadow);font:1.05rem Bangers;letter-spacing:.06em;transition:transform .12s,box-shadow .12s}
+.mode:active{transform:translate(3px,3px);box-shadow:1px 1px 0 var(--shadow)}
+.mode span{padding:5px 11px}
+[data-theme=day] .mode span:first-child,[data-theme=night] .mode span:last-child{background:var(--yellow);color:var(--on)}
+#flash{position:fixed;inset:0;z-index:70;pointer-events:none;opacity:0;background:radial-gradient(circle,var(--red) 3px,transparent 3.6px) 0 0/16px 16px,var(--yellow)}
+
+/* opening */
+#open{position:fixed;inset:0;z-index:100}
+#open .h{position:absolute;inset:0;animation-duration:.8s;animation-delay:1.25s;animation-timing-function:cubic-bezier(.7,0,.2,1);animation-fill-mode:forwards}
+#open .a{background:radial-gradient(circle,var(--red) 2.4px,transparent 3px) 0 0/14px 14px,var(--yellow);clip-path:polygon(0 0,100% 0,0 100%);animation-name:s1}
+#open .b{background:var(--red);clip-path:polygon(100% 0,100% 100%,0 100%);animation-name:s2}
+#open .c{position:absolute;inset:0;display:grid;place-items:center;animation:pop .55s cubic-bezier(.3,1.6,.5,1) both,out .25s ease-in 1.15s forwards}
+#open svg{width:min(80vmin,440px);overflow:visible}
+@keyframes s1{to{transform:translate(-110%,-110%)}}
+@keyframes s2{to{transform:translate(110%,110%)}}
+@keyframes pop{from{transform:scale(0) rotate(-25deg)}to{transform:scale(1) rotate(-4deg)}}
+@keyframes out{to{transform:scale(1.35) rotate(-4deg);opacity:0}}
+#skip{position:fixed;left:14px;bottom:14px;z-index:101;padding:6px 14px;background:var(--panel);color:var(--on);border:4px solid var(--on);box-shadow:4px 4px 0 var(--on);font:1.2rem Bangers;letter-spacing:.06em}
+.f-r{fill:var(--red)}.f-y{fill:var(--yellow)}.f-p{fill:#fffaf0}.st{stroke:var(--line);stroke-width:5;stroke-linejoin:round}
+.t-on{fill:#16120e;font-family:Bangers,Impact,sans-serif;text-anchor:middle}
+
+/* hero */
+.hero{position:relative;overflow:hidden;min-height:calc(100svh - 60px);padding:26px 18px 90px;display:grid;align-content:center}
+.hero::after{content:"";position:absolute;top:0;right:0;width:85%;height:75%;z-index:0;background:radial-gradient(circle,var(--red) 2.4px,transparent 3px) 0 0/15px 15px;-webkit-mask-image:radial-gradient(circle at 100% 0,#000 0,transparent 68%);mask-image:radial-gradient(circle at 100% 0,#000 0,transparent 68%);opacity:.55}
+.hin{position:relative;z-index:1;width:100%;max-width:1080px;margin:auto;display:grid;gap:14px;justify-items:start}
+.mono{justify-self:end;width:112px;padding:0;border:0;background:none}
+.mono svg{width:100%;display:block;transform:rotate(-6deg);transition:transform .35s cubic-bezier(.3,1.6,.5,1)}
+.mono:hover svg{transform:rotate(8deg) scale(1.07)}
+.tag{display:inline-block;background:var(--line);color:var(--bg);padding:.1em .7em;font-size:1rem;letter-spacing:.04em;transform:rotate(-1.5deg)}
+.name{font-size:clamp(4rem,24vw,13rem);line-height:.86;margin:.05em 0;text-transform:uppercase;text-shadow:.045em .045em 0 var(--red)}
+.ln{display:block;overflow:hidden;padding:.04em .1em .1em 0}
+.ln+.ln{padding-left:.5em}
+.ch{display:inline-block;transform:translateY(115%) rotate(10deg)}
+.ready .ch{animation:rise .75s cubic-bezier(.2,.9,.25,1.3) forwards;animation-delay:calc(var(--i)*70ms)}
+@keyframes rise{to{transform:none}}
+.bubble{position:relative;max-width:430px;margin:10px 0 18px 4px;padding:16px 24px 18px;background:var(--panel);border:4px solid var(--line);border-radius:34px;box-shadow:6px 6px 0 var(--shadow);font-size:1.35rem}
+.bubble::after,.say::after{content:"";position:absolute;left:38px;bottom:-15px;width:24px;height:24px;background:var(--panel);border:solid var(--line);border-width:0 4px 4px 0;transform:rotate(45deg) skew(8deg,8deg)}
+.roles{overflow:hidden;height:2.1em;font:1.7rem/1.05 Bangers;letter-spacing:.04em;color:var(--red)}
+[data-theme=day] .roles{color:#c9301b}
+.now{background:var(--yellow);color:var(--on);border:3px solid var(--line);padding:.35em .9em;max-width:440px;box-shadow:4px 4px 0 var(--shadow);transform:rotate(.8deg)}
+.btns{display:flex;flex-wrap:wrap;gap:16px;margin-top:10px}
+.btn{display:inline-block;padding:.35em 1.1em;font:1.5rem Bangers;letter-spacing:.06em;text-decoration:none;color:var(--on);border:4px solid var(--line);box-shadow:5px 5px 0 var(--shadow);transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translate(-3px,-3px) rotate(-1.5deg);box-shadow:8px 8px 0 var(--shadow)}
+.btn:active{transform:translate(3px,3px);box-shadow:1px 1px 0 var(--shadow)}
+.b1{background:var(--red);transform:rotate(-1.5deg)}.b2{background:var(--yellow);transform:rotate(1deg)}
+
+/* sections */
+.page{padding:78px 18px;position:relative}
+.wrap{max-width:1080px;margin:auto}
+h2{font-size:clamp(2.8rem,11vw,6rem);margin:.2em 0 .35em;text-shadow:.05em .05em 0 var(--red)}
+h3{font-size:2.2rem;margin-bottom:.3em}
+.panel{position:relative;padding:22px;background:var(--panel);border:4px solid var(--line);box-shadow:8px 8px 0 var(--shadow);transform:rotate(var(--r,0deg))}
+.js .rv{opacity:0;transform:translateY(26px) scale(.94) rotate(calc(var(--r,0deg) - 2deg));transition:opacity .5s,transform .7s cubic-bezier(.3,1.5,.6,1)}
+.js .rv.in{opacity:1;transform:rotate(var(--r,0deg))}
+.p-y{background:var(--yellow);color:var(--on)}
+.p-r{background:var(--red);color:var(--on)}
+.p-k{background:var(--line);color:var(--bg)}
+
+.about{display:grid;gap:26px}
+.about .stack{display:grid;gap:26px}
+.about .panel:first-child{font-size:1.45rem}
+.about .panel:first-child::first-letter{float:left;font:4.2rem/.8 Bangers;color:var(--red);padding:.06em .1em 0 0}
+@media(min-width:860px){.about{grid-template-columns:5fr 7fr;gap:50px}.about>div:first-child{position:sticky;top:90px;align-self:start}}
+
+.skills{display:grid;gap:30px}
+.skills small{display:block;font-size:1.05rem;opacity:.9;margin-bottom:8px}
+.skills li{list-style:none;padding:10px 0;border-top:3px dashed currentColor}
+.skills li b{display:block;font:1.5rem Bangers;letter-spacing:.04em}
+@media(min-width:860px){.skills{grid-template-columns:1.15fr 1fr .85fr;align-items:start}.skills>:nth-child(2){margin-top:34px}.skills>:nth-child(3){margin-top:10px}}
+
+.strip{display:grid;gap:34px}
+.strip .panel{padding-top:34px}
+.lab{position:absolute;top:-20px;left:14px;padding:0 .6em;background:var(--yellow);color:var(--on);border:4px solid var(--line);font:1.5rem Bangers;letter-spacing:.05em;transform:rotate(-4deg)}
+.eye{width:92px;display:block;margin-bottom:8px}
+@media(min-width:860px){.strip{grid-template-columns:1fr 1.1fr 1fr;align-items:start}.strip>:nth-child(2){margin-top:48px}.strip>:nth-child(3){margin-top:16px}}
+
+.band{background:var(--yellow);color:var(--on);padding:calc(78px + 3vw) 18px;clip-path:polygon(0 3vw,100% 0,100% calc(100% - 3vw),0 100%)}
+.bubbles{display:grid;gap:40px 26px;margin-top:34px}
+.say{position:relative;padding:18px 24px;background:var(--panel);color:var(--text);border:4px solid var(--line);border-radius:30px;box-shadow:6px 6px 0 var(--shadow);font-size:1.3rem;transform:rotate(var(--r,0deg))}
+.say.r::after{left:auto;right:38px}
+@media(min-width:700px){.bubbles{grid-template-columns:1fr 1fr}.bubbles>:nth-child(even){margin-top:38px}}
+
+.hi{display:grid;gap:30px}
+.links{display:grid;gap:18px;align-content:start}
+.row{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:14px 18px;background:var(--panel);border:4px solid var(--line);box-shadow:6px 6px 0 var(--shadow);text-decoration:none;transition:transform .15s,box-shadow .15s,background .15s}
+.row:hover{background:var(--yellow);color:var(--on);transform:translate(-3px,-3px) rotate(-.6deg);box-shadow:9px 9px 0 var(--shadow)}
+.row b{font:1.8rem Bangers;letter-spacing:.04em}
+.row span{font-size:1.05rem;overflow-wrap:anywhere;text-align:right}
+@media(min-width:860px){.hi{grid-template-columns:1fr 1fr;gap:60px;align-items:center}}
+
+footer{padding:30px 18px 100px;text-align:left}
+.tbc{display:inline-block;padding:.2em 2.2em .2em .7em;background:var(--yellow);color:var(--on);font:clamp(1.8rem,7vw,3rem) Bangers;letter-spacing:.05em;clip-path:polygon(0 0,92% 0,100% 50%,92% 100%,0 100%)}
+footer p{margin-top:12px;font-size:1rem}
+
+#pow{position:fixed;inset:0;z-index:90;display:none;place-items:center;background:rgba(22,18,14,.75);cursor:pointer}
+#pow.on{display:grid}
+#pow svg{width:min(88vw,460px);animation:pop .5s cubic-bezier(.3,1.6,.5,1) both}
+
+@media(min-width:860px){
+.hin{grid-template-columns:1fr 340px;column-gap:40px}
+.hin>*{grid-column:1}
+.mono{grid-column:2;grid-row:1/span 5;width:100%;align-self:center;justify-self:center}
+.page{padding:110px 40px}.hero{padding:40px}
+}
+@media(prefers-reduced-motion:reduce){
+*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+.js .rv{opacity:1;transform:rotate(var(--r,0deg))}.ch{transform:none}
+}
+</style>
+</head>
+<body>
+
+<div id="open" aria-hidden="true">
+  <div class="h a"></div><div class="h b"></div>
+  <div class="c">
+    <svg viewBox="0 0 200 200"><polygon data-star="16,100,74,0.1" class="f-p st"/><polygon data-star="16,86,66,0.3" class="f-r st" style="stroke-width:3"/>
+    <text class="t-on" x="100" y="96" font-size="30" style="fill:#16120e" letter-spacing="2">ISSUE</text>
+    <text class="t-on" x="100" y="140" font-size="52">#01</text></svg>
+  </div>
+</div>
+<button id="skip" type="button">Skip</button>
+
+<div id="bar" aria-hidden="true"><i></i></div>
+<div id="flash"></div>
+<button id="mode" class="mode" type="button" aria-label="Switch between the day issue and the night issue"><span>DAY</span><span>NIGHT</span></button>
+
+<nav aria-label="Sections">
+  <a href="#top">Cover</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#journey">Journey</a><a href="#beyond">Beyond</a><a href="#contact">Contact</a>
+</nav>
+
+<main>
+<header class="hero" id="top">
+  <div class="hin">
+    <button class="mono" id="mono" type="button" aria-label="MJ monogram">
+      <svg viewBox="0 0 200 200" aria-hidden="true"><polygon data-star="13,98,76,0.2" class="f-r st"/><polygon data-star="13,68,55,0.55" class="f-y st" style="stroke-width:4"/><text class="t-on" x="100" y="123" font-size="70" letter-spacing="2">MJ</text></svg>
+    </button>
+    <span class="tag">Issue #01 · the first-year story</span>
+    <h1 class="name" id="name" aria-label="Mercin Jenila"><span class="ln">Mercin</span><span class="ln">Jenila</span></h1>
+    <div class="bubble">
+      <p>Hi! I'm Mercin,</p>
+      <div class="roles"><div id="role">a first-year IT student</div></div>
+    </div>
+    <p class="now"><b>Currently…</b> learning JavaScript and sketching a better version of my eye-disease idea.</p>
+    <div class="btns"><a class="btn b1" href="#about">Explore</a><a class="btn b2" href="#contact">Say hi</a></div>
+  </div>
+</header>
+
+<section class="page" id="about"><div class="wrap about">
+  <div><span class="tag">Chapter one</span><h2>Origin story</h2></div>
+  <div class="stack">
+    <p class="panel rv" style="--r:-.6deg">Hi, I'm Mercin. I'm in the first year of my B.Tech in Information Technology, which means most of my story is still unwritten, and I like it that way. Every week brings a new tool, a new error message, or a thing I didn't know I'd enjoy.</p>
+    <p class="panel p-y rv" style="--r:.6deg">The project that made me feel like a builder was a hackathon idea: using AI to catch eye diseases like glaucoma and retinopathy early. I'm not an expert yet. But it showed me that code can be about people, not only screens.</p>
+    <p class="panel rv" style="--r:-.3deg">Right now I'm learning the basics properly, the unglamorous foundations, so the next idea I build doesn't fall apart. If you're working on something and need a curious teammate, say hi.</p>
+  </div>
+</div></section>
+
+<section class="page" id="skills"><div class="wrap">
+  <span class="tag">Chapter two</span><h2>Tools in my belt</h2>
+  <div class="skills">
+    <div class="panel p-y rv" style="--r:-.5deg"><h3>Comfortable</h3><small>I can do these without a tutorial open.</small>
+      <ul><li><b>HTML &amp; CSS</b>Building and styling a page from a blank file.</li><li><b>Python basics</b>Loops, functions and small scripts.</li></ul></div>
+    <div class="panel rv" style="--r:.5deg"><h3>Learning</h3><small>Practising every week. Still looking things up.</small>
+      <ul><li><b>JavaScript</b>Making pages respond to people.</li><li><b>C and data structures</b>Understanding what's under the hood.</li><li><b>Git &amp; GitHub</b>Merge conflicts still scare me a little.</li></ul></div>
+    <div class="panel p-k rv" style="--r:-.4deg"><h3>Curious about</h3><small>Not yet, but I keep circling back.</small>
+      <ul><li><b>AI on medical images</b>Where my hackathon idea lives.</li><li><b>Reading research papers</b></li></ul></div>
+  </div>
+</div></section>
+
+<section class="page" id="journey"><div class="wrap">
+  <span class="tag">Chapter three</span><h2>The story so far</h2>
+  <div class="strip">
+    <div class="panel rv" style="--r:-.7deg"><span class="lab">Made</span>
+      <svg class="eye" viewBox="0 0 80 60" aria-hidden="true"><path d="M4 30Q40-4 76 30Q40 64 4 30Z" fill="var(--panel)" stroke="var(--line)" stroke-width="4" stroke-linejoin="round"/><circle cx="40" cy="30" r="14" fill="var(--red)" stroke="var(--line)" stroke-width="3"/><circle cx="40" cy="30" r="6" fill="#16120e"/><circle cx="35" cy="25" r="3" fill="#fffaf0"/></svg>
+      <p>A hackathon project on spotting eye diseases, glaucoma and retinopathy, early using AI. And this website, drawn entirely in CSS.</p></div>
+    <div class="panel p-y rv" style="--r:.6deg"><span class="lab">Learning</span>
+      <p>JavaScript, C and data structures, and how to read a technical article without panicking. Small habits, practised often.</p></div>
+    <div class="panel p-r rv" style="--r:-.4deg"><span class="lab">Next</span>
+      <p>Tools that catch health problems early and are simple enough for anyone to use. A properly working version of my eye-screening idea comes first.</p></div>
+  </div>
+</div></section>
+
+<section class="band" id="beyond"><div class="wrap">
+  <span class="tag">Off-panel</span><h2>Beyond code</h2>
+  <p style="max-width:34ch">The parts of me that never make it into a commit message.</p>
+  <div class="bubbles">
+    <p class="say rv" style="--r:-1deg">I keep far too many browser tabs open. Each one is a promise to myself.</p>
+    <p class="say r rv" style="--r:1deg">I think better with a pen in my hand. Half my notes are doodles.</p>
+    <p class="say rv" style="--r:.8deg">I got into AI because one hackathon question wouldn't leave me alone.</p>
+    <p class="say r rv" style="--r:-.8deg">Favourite moment in coding: the second the red error text finally vanishes.</p>
+  </div>
+</div></section>
+
+<section class="page" id="contact"><div class="wrap hi">
+  <div><span class="tag">Last page</span><h2>Say hi!</h2>
+    <p style="max-width:30ch">Got an idea, a hackathon team that needs one more person, or advice for a first-year? My inbox is open.</p></div>
+  <div class="links">
+    <!-- EDIT: replace these three links with your own -->
+    <a class="row rv" style="--r:-.4deg" href="mailto:your.email@example.com"><b>Email</b><span>your.email@example.com</span></a>
+    <a class="row rv" style="--r:.5deg" href="https://www.linkedin.com/in/your-handle" target="_blank" rel="noopener"><b>LinkedIn</b><span>linkedin.com/in/your-handle</span></a>
+    <a class="row rv" style="--r:-.3deg" href="https://github.com/your-handle" target="_blank" rel="noopener"><b>GitHub</b><span>github.com/your-handle</span></a>
+  </div>
+</div></section>
+</main>
+
+<footer><div class="wrap"><span class="tbc">To be continued</span><p>Mercin Jenila · Issue #01 · 2026</p></div></footer>
+
+<div id="pow" role="dialog" aria-label="Secret panel">
+  <svg viewBox="0 0 200 200"><polygon data-star="12,98,66,0.1" class="f-y st"/><text class="t-on" x="100" y="112" font-size="62" transform="rotate(-6 100 100)">POW!</text><text class="t-on" x="100" y="138" font-size="15" transform="rotate(-6 100 100)">You found the secret panel.</text></svg>
+</div>
+
+<script>
+(function(){
+var $=function(s){return document.querySelector(s)},reduce=matchMedia('(prefers-reduced-motion: reduce)').matches,body=document.body;
+
+/* comic bursts */
+function star(n,o,i,rot){var p=[];for(var k=0;k<n*2;k++){var r=k%2?i:o*(1+((k*7)%5-2)*.025),a=Math.PI*k/n+rot;p.push((100+r*Math.cos(a)).toFixed(1)+','+(100+r*Math.sin(a)).toFixed(1))}return p.join(' ')}
+document.querySelectorAll('[data-star]').forEach(function(e){var s=e.dataset.star.split(',');e.setAttribute('points',star(+s[0],+s[1],+s[2],+s[3]))});
+
+/* name rises letter by letter */
+var i=0;document.querySelectorAll('#name .ln').forEach(function(l){var t=l.textContent;l.textContent='';l.setAttribute('aria-hidden','true');t.split('').forEach(function(c){var s=document.createElement('span');s.className='ch';s.style.setProperty('--i',i++);s.textContent=c;l.appendChild(s)})});
+
+/* opening: once, under 2.5s, skippable */
+var op=$('#open'),sk=$('#skip'),done=false;
+function finish(){if(done)return;done=true;op&&op.remove();sk.remove();body.classList.add('ready');document.documentElement.style.overflow=''}
+if(reduce){finish()}else{document.documentElement.style.overflow='hidden';setTimeout(function(){body.classList.add('ready')},1550);setTimeout(finish,2300);sk.addEventListener('click',finish)}
+
+/* tagline cycles roles */
+var roles=['a first-year IT student','a builder of small things','curious about medical AI','a doodler of big ideas'],ri=0,rl=$('#role');
+if(!reduce)setInterval(function(){
+  var o=rl.animate([{transform:'translateY(0)',opacity:1},{transform:'translateY(-80%)',opacity:0}],{duration:260,easing:'ease-in',fill:'forwards'});
+  o.onfinish=function(){ri=(ri+1)%roles.length;rl.textContent=roles[ri];o.cancel();rl.animate([{transform:'translateY(80%)',opacity:0},{transform:'translateY(0)',opacity:1}],{duration:480,easing:'cubic-bezier(.2,1.3,.4,1)'})}
+},2800);
+
+/* day / night issue */
+var root=document.documentElement,m=$('#mode'),fl=$('#flash');
+function setT(t){root.dataset.theme=t;m.setAttribute('aria-pressed',t==='night');try{localStorage.setItem('mj-theme',t)}catch(e){}}
+setT(root.dataset.theme);
+m.addEventListener('click',function(){if(!reduce)fl.animate([{opacity:.95},{opacity:0}],{duration:520,easing:'ease-out'});setT(root.dataset.theme==='night'?'day':'night')});
+
+/* scroll progress */
+var bar=$('#bar i'),tk=0;
+function sc(){var h=root,p=h.scrollTop/((h.scrollHeight-h.clientHeight)||1);bar.style.transform='scaleX('+Math.min(1,Math.max(0,p))+')';tk=0}
+addEventListener('scroll',function(){if(!tk)tk=requestAnimationFrame(sc)},{passive:true});sc();
+
+/* panels pop in */
+var rv=document.querySelectorAll('.rv');
+if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.15});rv.forEach(function(e){io.observe(e)})}
+else rv.forEach(function(e){e.classList.add('in')});
+
+/* hidden easter egg: poke the monogram five times */
+var n=0,pw=$('#pow'),pt;
+$('#mono').addEventListener('click',function(){if(++n>=5){n=0;pw.classList.add('on');clearTimeout(pt);pt=setTimeout(function(){pw.classList.remove('on')},2800)}});
+pw.addEventListener('click',function(){pw.classList.remove('on')});
+})();
+</script>
+</body>
+</html>
